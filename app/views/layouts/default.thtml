@@ -1,0 +1,43 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>CakePHP(tm) : <?php echo $title_for_layout;?></title>
+<link rel="icon" href="<?php echo $this->webroot . 'favicon.ico';?>" type="image/x-icon" />
+<link rel="shortcut icon" href="<?php echo $this->webroot . 'favicon.ico';?>" type="image/x-icon" />
+<?php echo $html->css('cake.generic');?>
+</head>
+<body>
+	<table style="border: 0px solid">
+		<tr style="border: 0px solid">
+			<td style="border: 0px solid"background="<?=$this->webroot?>LateralI.jpg" width="50"></td>
+			<td style="border: 0px solid">
+				<table align="center" style="border: 0px solid">
+					<tr style="border: 0px solid"><td style="border: 0px solid" colspan="3"><img src="<?=$this->webroot?>rotulo.jpg"/></td></tr>
+					<tr style="border: 0px solid">
+						<td style="border: 0px solid" align="center">
+							<a href="<?=$this->webroot?>cars"><img src="<?=$this->webroot?>cars.jpg"/></a>
+						</td>	
+						<td style="border: 0px solid" align="center">
+							<a href="<?=$this->webroot?>workers"><img src="<?=$this->webroot?>workers.jpg"/></a>
+						</td>	
+						<td style="border: 0px solid" align="center">
+							<a href="<?=$this->webroot?>jobs"><img src="<?=$this->webroot?>jobs.jpg"/></a>
+						</td>	
+					</tr>
+
+					<tr style="border: 0px solid"><td style="border: 0px solid" colspan="3">
+						<?php if ($session->check('Message.flash'))
+								{
+									$session->flash();
+								}
+								echo $content_for_layout;
+						?>					
+					</td></tr>
+				</table>
+			</td>
+			<td style="border: 0px solid" background="<?=$this->webroot?>LateralD.jpg" width="50"></td>
+		</tr>
+	</table>
+</body>
+
+</html>
